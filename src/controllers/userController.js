@@ -67,6 +67,8 @@ export const postlogin = async (req,res) =>{
     } else {
         console.log("Collect");
     }
+    req.session.loggedIn =true;
+    req.session.user=user;
     return res.redirect("/");
 };
 
