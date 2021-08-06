@@ -1,7 +1,12 @@
 import mongoose from "mongoose";
 
 //링크 뒤에 디비 이름을 적어주어야한다.
-mongoose.connect("mongodb://127.0.0.1:27017/wetube",{useNewUrlParser: true,useUnifiedTopology: true,useFindAndModify:false});
+mongoose.connect("mongodb://127.0.0.1:27017/wetube",{
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useFindAndModify:false,
+    useCreateIndex:true
+});
 
 const db = mongoose.connection;
 
