@@ -32,7 +32,7 @@ export const postJoin = async(req,res) => {
             name,
             username,
             email,
-            password,
+            password:password1,
             location
         });
         return res.redirect("/login");
